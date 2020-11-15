@@ -1,0 +1,11 @@
+.ItemCard {
+  border: 1px solid black;
+}
+
+.ItemCard-image {
+  max-width: 4rem;
+}
+
+.ItemCard h3 {
+  text-transform: capitalize;
+}
