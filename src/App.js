@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <h1>Shoply</h1>
+      
     <Routes/>
     
     </div>

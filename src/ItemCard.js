@@ -1,9 +1,5 @@
 import React from "react";
 import {useDispatch} from 'react-redux';
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
 import "./styles/ItemCard.css"
 
 const ItemCard =({name, price, id, image_url})=>{

@@ -1,6 +1,5 @@
 import React from "react";
 import {useDispatch} from 'react-redux'
-import {Button} from "reactstrap"
 import "./styles/CartCard.css"
 
 const CartCard =({name, price, id, qty})=>{

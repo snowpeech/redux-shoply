@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import "./styles/Navbar.css"
-// import { Navbar } from 'reactstrap';
 
 const Navbar = () =>{
     const ACTIVE_STYLES = {

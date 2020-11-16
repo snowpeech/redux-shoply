@@ -15,10 +15,7 @@ const Cart =()=>{
         console.log("cartArr", )
     }
 
-    //need to filter value isn't null and isn't 0
-
-    //{name, price, id, qty}
-    return(<>
+return(<>
     <h2>My Cart</h2>
     <div className="flex-container flex-column">
     <div className="Cart-banner">

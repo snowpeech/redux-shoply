@@ -5,8 +5,7 @@ const INITIAL_STATE = {cart:{},products};//needs this format to pull in cart com
 function rootReducer(state = INITIAL_STATE, action) {  
   switch (action.type) {
     case "ADD":
-      {//increase product qty by 1 
-        console.log("add",state)
+      {//increase product qty by 1
       let {id,price,name} = action.payload
       let {cart} = state;
 
@@ -21,7 +20,7 @@ function rootReducer(state = INITIAL_STATE, action) {
 
     case "SUBTRACT":
       {// decrease product qty by 1
-          console.log("subtract")
+          
         let {cart} = state;
         let {id,price,name} = action.payload;
         let newStat={"qty":cart[id]["qty"]-1, price,name}
