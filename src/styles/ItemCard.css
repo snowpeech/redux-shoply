@@ -1,11 +1,49 @@
 .ItemCard {
-  border: 1px solid black;
+  border: 3px solid #f8f3e9;
+  width: 27vw;
+  height: 355px;
+  padding: 0.5rem 0.5rem 0rem;
+  margin: 0.75rem;
+  border-radius: 3px;
+  background-color: #f8f5e9;
+  color: #dd9d49;
+  overflow: auto;
 }
 
 .ItemCard-image {
-  max-width: 4rem;
+  max-width: 100%;
+  max-height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
-.ItemCard h3 {
+.ItemCard h5 {
   text-transform: capitalize;
+  margin: 10px 0px;
+  font-size: large;
+  font-family: "Bree Serif", serif;
+  color: rgb(59, 27, 0);
+  text-shadow: 1px 1px 2px #dd9d49;
+}
+
+.ItemCard-button {
+  background-color: #9ad3bc;
+  color: black;
+  font-family: "Bree Serif", serif;
+  width: 100%;
+  bottom: 0px;
+  margin: 0px;
+  outline-style: none;
+}
+
+.ItemCard .card-text {
+  font-size: smaller;
+  text-align: left;
+  padding: 0px 10px;
+}
+
+.ItemCard-price {
+  color: #ebb268;
+  font-style: italic;
 }

@@ -1,20 +1,30 @@
 import React from "react";
-import {useDispatch} from 'react-redux'
+import {useDispatch} from 'react-redux';
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 import "./styles/ItemCard.css"
 
-const ItemCard =({name, price, id, description, image_url})=>{
+const ItemCard =({name, price, id, image_url})=>{
     const dispatch = useDispatch();
-    const addItem=(id)=>{
-        console.log("add item from card",id)
-        dispatch({type:"ADD",payload:{id}})
+
+    const addItem=(id,price)=>{
+        dispatch({type:"ADD",payload:{id,price,name}})
     }
     
-    return(<div className="ItemCard">
-        <h3>{name}</h3>
-            <div>Price: {price}</div>
-            <img className="ItemCard-image" src={image_url}/>
-            <div>{description}</div>
-            <button onClick={()=>addItem(id)}>Add to Cart</button>
+    return(
+    <div className="ItemCard">
+        <a href={`/products/${id}`}>
+        <img top src={image_url} alt={`${name} image`} className="ItemCard-image"/>
+
+        <div>
+            <h5>{name}</h5>
+            <div className="ItemCard-price">${price}</div>
+            
+        </div>
+        </a>
+        <button className="ItemCard-button" onClick={()=>addItem(id,price)}>Add to Cart</button>  
     </div>)
 }
 

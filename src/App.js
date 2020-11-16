@@ -1,13 +1,15 @@
 // import logo from './logo.svg';
-import ProductList from "./ProductList"
-import Cart from "./Cart"
+import Routes from "./Routes"
+import Navbar from "./Navbar"
 import './styles/App.css';
 
 function App() {
   return (
     <div className="App">
-    <ProductList/>
-    <Cart />
+      <Navbar />
+      <h1>Shoply</h1>
+    <Routes/>
+    
     </div>
   );
 }

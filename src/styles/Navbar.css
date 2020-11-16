@@ -1,0 +1,9 @@
+.Navbar {
+  margin: 10px;
+  font-family: "Bree Serif", serif;
+}
+
+.Navbar a {
+  padding: 10px;
+  text-decoration: none;
+}

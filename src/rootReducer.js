@@ -1,33 +1,45 @@
-const INITIAL_STATE = {cart:{}};//needs this format to pull in cart component
+import products from "./data.json";
 
-function rootReducer(state = INITIAL_STATE, action) {
+const INITIAL_STATE = {cart:{},products};//needs this format to pull in cart component
+
+function rootReducer(state = INITIAL_STATE, action) {  
   switch (action.type) {
     case "ADD":
-      const {id} = action.payload
+      {//increase product qty by 1 
+        console.log("add",state)
+      let {id,price,name} = action.payload
       let {cart} = state;
 
       if(cart[id]){
+        let newStat={"qty":cart[id]["qty"]+1, price,name}
         
-        return {...state, cart:{...cart, [id]: cart[id]+1}}
-        
+        return {...state, cart:{...cart, [id]: newStat}}
       } else {
-        
-        return {...state, cart:{...cart, [id]:1}}
+        return {...state, cart:{...cart, [id]:{"qty":1, price,name}}}
       }
-      
+    }
+
     case "SUBTRACT":
-        // decrease product qty by 1
-        return {...state, cart:{...cart, [id]: cart[id]-1}};
+      {// decrease product qty by 1
+          console.log("subtract")
+        let {cart} = state;
+        let {id,price,name} = action.payload;
+        let newStat={"qty":cart[id]["qty"]-1, price,name}
+        
+        return {...state, cart:{...cart, [id]: newStat}}
+      }
     
     case "CHANGE_QTY": //? optional toreplace add and subtract
       //update product qty to passed in num
       return state;
     
-    case "REMOVE":
+    case "REMOVE":{
       //remove item from cart
-      return state;
-    
-
+      let {cart} = state;
+      let {id} = action.payload;        
+      return {...state, cart:{...cart, [id]:{"qty":0}}}
+    }
+  
     default:
       return state;
   }

@@ -1,0 +1,16 @@
+.Cart-banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 40px;
+  width: 90%;
+  background-color: #f8f5e9;
+  height: 35px;
+  border: none;
+}
+.Cart-banner div {
+  padding: 7px;
+}
+.Cart-total {
+  text-align: right;
+  padding: 2px 50px;
+}

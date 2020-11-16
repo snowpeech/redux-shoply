@@ -1,0 +1,52 @@
+.CartCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px 10px 0px;
+  width: 95%;
+  background-color: #f8f5e9;
+  height: 40px;
+  border-top: 1px solid rgb(209, 209, 209);
+}
+.CartCard div {
+  padding: 7px;
+}
+
+.CartCard button {
+  /* background-color: rgb(209, 209, 209); */
+  padding: 10px;
+  background-color: #9ad3bc;
+
+  color: black;
+  font-family: "Roboto", sans-serif;
+
+  margin: 0px;
+  outline-style: none;
+}
+
+.CartCard .group {
+  display: flex;
+  width: 150px;
+}
+
+.CartCard .title {
+  text-transform: capitalize;
+  font-size: medium;
+  padding: 0px 10px;
+  margin: 7px;
+}
+
+.CartCard .delBtn {
+  margin: 7px 2px -9px;
+  padding: 7px 2px;
+  background-color: white;
+  /* border: 1px solid #ec524b; */
+  color: #ec524b;
+}
+
+
+.CartCard .btn-left {
+  border-radius: 3px 0px 0px 3px;
+}
+.CartCard .btn-right {
+  border-radius: 0px 3px 3px 0px;
+}
